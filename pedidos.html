@@ -3,20 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Produtos | VLC Uniformes</title>
+    <title>Pedidos | VLC Uniformes</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Specific adjustments for larger catalog page */
-        .catalog-section { padding-top: 140px; min-height: 80vh; }
-        .product-table th, .product-table td { padding: 20px 24px; font-size: 1rem; }
-        .product-img-placeholder { width: 100px; height: 100px; font-size: 0.8rem; }
-        .sector-header h3 { font-size: 1.1rem; }
-        .catalog-nav-btn { padding: 20px 40px; font-size: 0.9rem; }
-    </style>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header class="header" id="header">
         <div class="header-top">
             <div class="container">
@@ -36,8 +26,8 @@
                 <nav class="nav-desktop">
                     <a href="index.html#inicio">Início</a>
                     <a href="index.html#segmentos">Segmentos</a>
-                    <a href="catalogo.html" class="active">Catálogo</a>
-                    <a href="pedidos.html">Pedidos</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="pedidos.html" class="active">Pedidos</a>
                     <a href="index.html#sobre">Sobre</a>
                     <a href="index.html#contato">Contato</a>
                 </nav>
@@ -59,54 +49,69 @@
         <a href="index.html#contato" onclick="closeMobile()">Contato</a>
     </nav>
 
-    <!-- ===== CATALOGO ===== -->
-    <section class="catalog-section" id="catalogo">
+    <section class="order-section" id="ordersPage">
         <div class="container">
             <div class="section-header">
-                <h2>Nosso <strong>Catálogo Completo</strong></h2>
+                <h2>Seu <strong>Pedido</strong></h2>
                 <div class="section-divider"></div>
-                <p>Navegue pelos setores e visualize todas as peças disponíveis. Em breve, fotos reais de cada produto.</p>
+                <p>Monte seu pedido com itens e tamanhos. Ao finalizar, o pedido é enviado para WhatsApp.</p>
             </div>
 
             <div class="note-banner">
-                <strong>Observação:</strong> Os valores apresentados são referências. Para orçamentos personalizados, quantidades específicas ou personalizações, entre em contato conosco.
+                <strong>Importante:</strong> Os valores são considerados apenas quando estiverem disponíveis (ex.: Hospitalar). Itens sem valor aparecem como “Sob consulta”.
             </div>
 
-            <div class="catalog-nav">
-                <button class="catalog-nav-btn active" onclick="switchCatalog('hospital')" data-tab="hospital">Hospitalar</button>
-                <button class="catalog-nav-btn" onclick="switchCatalog('hotel')" data-tab="hotel">Hotelaria</button>
-                <button class="catalog-nav-btn" onclick="switchCatalog('empresa')" data-tab="empresa">Empresas</button>
-            </div>
+            <div class="order-grid">
+                <div class="order-card">
+                    <h3 class="order-card-title">Dados do Cliente</h3>
+                    <form id="orderCustomerForm" class="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="orderName">Nome</label>
+                                <input type="text" id="orderName" name="orderName" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="orderCompany">Empresa</label>
+                                <input type="text" id="orderCompany" name="orderCompany" placeholder="Nome da empresa">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="orderPhone">Telefone</label>
+                                <input type="tel" id="orderPhone" name="orderPhone" placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="orderSegment">Segmento</label>
+                                <select id="orderSegment" name="orderSegment">
+                                    <option value="">Selecione</option>
+                                    <option value="Hospitalar">Hospitalar</option>
+                                    <option value="Hotelaria">Hotelaria</option>
+                                    <option value="Empresas">Empresas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderNotes">Observações</label>
+                            <textarea id="orderNotes" name="orderNotes" placeholder="Ex.: bordado, cores, setores, prazos..."></textarea>
+                        </div>
+                        <div class="order-actions">
+                            <a href="catalogo.html" class="btn btn-outline-dark order-secondary">Adicionar mais itens</a>
+                            <button type="button" class="btn btn-dark" id="orderFinalizeBtn">Finalizar no WhatsApp</button>
+                        </div>
+                    </form>
+                </div>
 
-            <!-- ========== HOSPITALAR ========== -->
-            <div class="catalog-panel active" id="panel-hospital">
-                <p style="text-align: center; padding: 40px; color: var(--color-text-muted);">Carregando produtos...</p>
-            </div>
-
-
-            <!-- ========== HOTELARIA ========== -->
-            <div class="catalog-panel" id="panel-hotel">
-                <div class="placeholder-panel">
-                    <h3>Catálogo <strong>Hotelaria</strong></h3>
-                    <p>O catálogo completo para o segmento hoteleiro está sendo atualizado. Entre em contato para receber nossa tabela de preços completa para hotéis e pousadas.</p>
-                    <a href="index.html#contato" class="btn btn-dark">Solicitar Tabela de Preços</a>
+                <div class="order-card">
+                    <div class="order-card-header">
+                        <h3 class="order-card-title">Itens do Pedido</h3>
+                        <button type="button" class="order-link" id="orderClearBtn">Limpar</button>
+                    </div>
+                    <div id="orderCartContainer"></div>
                 </div>
             </div>
-
-
-            <!-- ========== EMPRESAS ========== -->
-            <div class="catalog-panel" id="panel-empresa">
-                <div class="placeholder-panel">
-                    <h3>Catálogo <strong>Empresas</strong></h3>
-                    <p>O catálogo completo para o segmento empresarial está sendo atualizado. Entre em contato para receber nossa tabela de preços completa para empresas.</p>
-                    <a href="index.html#contato" class="btn btn-dark">Solicitar Tabela de Preços</a>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -128,9 +133,9 @@
                 <div>
                     <h4>Segmentos</h4>
                     <ul>
-                        <li><a href="javascript:void(0)" onclick="switchCatalog('hospital')">Hospitalar</a></li>
-                        <li><a href="javascript:void(0)" onclick="switchCatalog('hotel')">Hotelaria</a></li>
-                        <li><a href="javascript:void(0)" onclick="switchCatalog('empresa')">Empresas</a></li>
+                        <li><a href="catalogo.html?tab=hospital">Hospitalar</a></li>
+                        <li><a href="catalogo.html?tab=hotel">Hotelaria</a></li>
+                        <li><a href="catalogo.html?tab=empresa">Empresas</a></li>
                     </ul>
                 </div>
                 <div>
@@ -149,7 +154,6 @@
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOAT -->
     <div class="whatsapp-float">
         <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -157,9 +161,7 @@
         </a>
     </div>
 
-    <!-- BACK TO TOP -->
     <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
-
 
     <script src="js/scripts.js"></script>
 </body>
