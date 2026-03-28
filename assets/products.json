@@ -1,0 +1,141 @@
+{
+  "hospitalar": [
+    {
+      "sector": "Gestão Administrativa",
+      "items": [
+        { "name": "Top Fem. Tecido Duplo", "price": "R$ 108,65" },
+        { "name": "Vestido Nat. Fem. Forrado", "price": "R$ 179,50" },
+        { "name": "Calça Fem. com Forro e Vivo no Bolso", "price": "R$ 104,80" },
+        { "name": "Spancer com Lapela de Pesponto e Bolso Embutido", "price": "R$ 189,90" },
+        { "name": "Blazer Feminino com Viés e Bolso de Vivo", "price": "R$ 197,50" }
+      ]
+    },
+    {
+      "sector": "Integrar",
+      "items": [
+        { "name": "Blusa do Conj. Scrub Fem. M.C Mod. Michele Malha Azul", "price": "R$ 87,60" },
+        { "name": "Blusa do Conj. Scrub Masc. M.C Mod. Michele Malha Azul", "price": "R$ 87,60" },
+        { "name": "Blusa do Conj. Scrub Fem. M.L Mod. Michele Malha Azul", "price": "R$ 102,83" },
+        { "name": "Blusa do Conj. Scrub Masc. M.L Mod. Michele Malha Azul", "price": "R$ 102,83" },
+        { "name": "Calça do Conj. Scrub Fem. Mod. Michele Malha Azul", "price": "R$ 112,31" },
+        { "name": "Calça do Conj. Scrub Masc. Mod. Michele Malha Azul", "price": "R$ 112,31" },
+        { "name": "Top Fem.", "price": "R$ 74,50" },
+        { "name": "Blaser Fem. com Bolso e Ziper Invisível", "price": "R$ 194,90" },
+        { "name": "Blusa Nara Fem.", "price": "R$ 95,90" },
+        { "name": "Calça Social Fem. com Bolso Lateral", "price": "R$ 93,70" }
+      ]
+    },
+    {
+      "sector": "Higiene",
+      "items": [
+        { "name": "Blusa M.L do Conjunto Scrub Feminino", "price": "R$ 80,20" },
+        { "name": "Blusa M.C do Conjunto Scrub Feminino", "price": "R$ 75,40" },
+        { "name": "Calça do Conjunto Scrub Feminino", "price": "R$ 96,65" }
+      ]
+    },
+    {
+      "sector": "Ouvidoria",
+      "items": [
+        { "name": "Vestido Forrado com Pregas Fem.", "price": "R$ 178,40" },
+        { "name": "Blusa com Pregas Fem. M.C Tecido Duplo", "price": "R$ 76,90" },
+        { "name": "Blusa com Pregas Fem. M.L Tecido Duplo", "price": "R$ 86,90" },
+        { "name": "Blaser com Bolso Embutido Fem.", "price": "R$ 192,50" },
+        { "name": "Calça Fem.", "price": "R$ 93,70" }
+      ]
+    },
+    {
+      "sector": "Nutrição",
+      "items": [
+        { "name": "Jaleco Nutri-Ice", "price": "R$ 86,90" },
+        { "name": "Avental de Cozinha", "price": "R$ 59,90" },
+        { "name": "Dólmã Fem. Cozinheira", "price": "R$ 169,90" },
+        { "name": "Dólmã Masc. Cozinheiro", "price": "R$ 175,90" }
+      ]
+    },
+    {
+      "sector": "Tesouraria",
+      "items": [
+        { "name": "Blusa do Conj. Scrub Bi Color Fem. M.C.", "price": "R$ 70,10" },
+        { "name": "Blusa do Conj. Scrub Bi Color Fem. M.L.", "price": "R$ 79,90" },
+        { "name": "Blusa do Conj. Scrub Bi Color Masc. M.C.", "price": "R$ 99,90" },
+        { "name": "Blusa do Conj. Scrub Bi Color Masc. M.L.", "price": "R$ 109,91" },
+        { "name": "Calça do Conj. Scrub Bi Color Social Fem.", "price": "R$ 89,90" },
+        { "name": "Calça do Conj. Scrub Bi Color Social Masc.", "price": "R$ 99,40" }
+      ]
+    },
+    {
+      "sector": "Farmácia",
+      "items": [
+        { "name": "Camisa Polo Masculina com Bordado", "price": "R$ 59,90" },
+        { "name": "Blusa Fem. M.C com Laço", "price": "R$ 96,90" },
+        { "name": "Jaqueta Masc. Forrada Mot.", "price": "R$ 156,40" },
+        { "name": "Calça de Sarja Masc. c/ Bolso Aplicado na Perna e Lateral", "price": "R$ 136,70" },
+        { "name": "Calça Flare Feminina com Bolso Faca Bi Stretch", "price": "R$ 120,72" },
+        { "name": "Blaser c/ Bolso e Vivo Frontal e Pesponto no Bolso", "price": "R$ 197,30" },
+        { "name": "Top Feminino", "price": "R$ 74,50" },
+        { "name": "Jaqueta de Malha Fem. Balconista", "price": "R$ 156,30" },
+        { "name": "Calça do Scrub Fem. Malha Poly Balconista", "price": "R$ 111,40" },
+        { "name": "Blusa do Scrub Fem. Malha Poly Balconista", "price": "R$ 87,20" },
+        { "name": "Calça do Scrub Fem. Bi Elastic Poly Balconista", "price": "R$ 89,90" }
+      ]
+    },
+    {
+      "sector": "Seguranças",
+      "items": [
+        { "name": "Camisa Social Masc. Manga Curta", "price": "R$ 108,65" },
+        { "name": "Camisa Social Masc. Manga Longa", "price": "R$ 127,90" },
+        { "name": "Camisa Social Fem. Manga Curta", "price": "R$ 108,65" },
+        { "name": "Camisa Social Fem. Manga Longa", "price": "R$ 127,90" },
+        { "name": "Calça Social Masc. com Bolso Tras. de Vivo", "price": "R$ 129,22" },
+        { "name": "Calça Social Fem. com Bolso Faca", "price": "R$ 120,72" },
+        { "name": "Jaqueta Fem. Forrada com Bolso", "price": "R$ 156,30" },
+        { "name": "Jaqueta Masc. Forrada com Bolso", "price": "R$ 156,30" }
+      ]
+    },
+    {
+      "sector": "Motoristas",
+      "items": [
+        { "name": "Calça Social Masc. com Bolso Tras. de Vivo", "price": "R$ 129,22" },
+        { "name": "Calça Social Fem. com Bolso Faca", "price": "R$ 120,72" },
+        { "name": "Camisa Social Masc. Manga Curta", "price": "R$ 108,65" },
+        { "name": "Camisa Social Masc. Manga Longa", "price": "R$ 127,90" },
+        { "name": "Camisa Social Fem. Manga Curta", "price": "R$ 108,65" },
+        { "name": "Camisa Social Fem. Manga Longa", "price": "R$ 127,90" },
+        { "name": "Jaqueta Fem. Forrada com Bolso", "price": "R$ 156,30" },
+        { "name": "Jaqueta Masc. Forrada com Bolso", "price": "R$ 156,30" }
+      ]
+    },
+    {
+      "sector": "Recepção",
+      "items": [
+        { "name": "Blusa do Conj. Scrub Bi Color Fem. M.C.", "price": "R$ 70,10" },
+        { "name": "Blusa do Conj. Scrub Bi Color Fem. M.L.", "price": "R$ 79,90" },
+        { "name": "Blusa do Conj. Scrub Bi Color Masc. M.C.", "price": "R$ 99,90" },
+        { "name": "Blusa do Conj. Scrub Bi Color Masc. M.L.", "price": "R$ 109,91" },
+        { "name": "Calça do Conj. Scrub Bi Color Social Fem.", "price": "R$ 89,90" },
+        { "name": "Calça do Conj. Scrub Bi Color Social Masc.", "price": "R$ 99,40" }
+      ]
+    },
+    {
+      "sector": "Fisioterapia",
+      "items": [
+        { "name": "Blusa do Conj. Scrub Fem. Mod. Michele M.L Malha (Aux.)", "price": "R$ 102,24" },
+        { "name": "Blusa do Conj. Scrub Masc. Mod. Michele M.L Malha (Aux.)", "price": "R$ 102,83" },
+        { "name": "Blusa do Conj. Scrub Fem. Mod. Michele M.L Malha", "price": "R$ 102,24" },
+        { "name": "Blusa do Conj. Scrub Masc. Mod. Michele M.L Malha", "price": "R$ 102,83" },
+        { "name": "Blusa do Conj. Scrub Fem. Mod. Michele M.C Malha (Aux.)", "price": "R$ 86,72" },
+        { "name": "Blusa do Conj. Scrub Masc. Mod. Michele M.C Malha (Aux.)", "price": "R$ 86,72" },
+        { "name": "Blusa do Conj. Scrub Fem. Mod. Michele M.C Malha", "price": "R$ 86,72" },
+        { "name": "Blusa do Conj. Scrub Masc. Mod. Michele M.C Malha", "price": "R$ 86,72" },
+        { "name": "Calça do Conj. Scrub Fem. Mod. Michele Malha (Aux.)", "price": "R$ 111,19" },
+        { "name": "Calça do Conj. Scrub Masc. Mod. Michele Malha (Aux.)", "price": "R$ 111,19" },
+        { "name": "Calça do Conj. Scrub Fem. Mod. Michele Malha", "price": "R$ 111,19" },
+        { "name": "Calça do Conj. Scrub Masc. Mod. Michele Malha", "price": "R$ 111,19" },
+        { "name": "Blusa Polly Fem. M.C", "price": "R$ 76,90" },
+        { "name": "Blusa Polly Fem. M.L", "price": "R$ 86,90" }
+      ]
+    }
+  ],
+  "hotelaria": [],
+  "empresas": []
+}

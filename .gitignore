@@ -1,0 +1,17 @@
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS related
+.DS_Store
+Thumbs.db
+
+# Dependencies (if any in the future)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
