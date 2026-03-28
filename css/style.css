@@ -126,6 +126,9 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-desktop a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--color-text-light);
@@ -196,13 +199,38 @@ img { max-width: 100%; display: block; }
 .nav-mobile.open { right: 0; }
 
 .nav-mobile a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 14px 0;
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--color-text);
     border-bottom: 1px solid var(--color-border-light);
     letter-spacing: 0.5px;
+}
+
+.order-count-badge {
+    min-width: 22px;
+    height: 20px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--color-dark);
+    color: var(--color-white);
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    opacity: 0;
+    transform: translateY(-1px);
+    transition: var(--transition);
+}
+
+.order-count-badge.show {
+    opacity: 1;
 }
 
 .nav-mobile-close {

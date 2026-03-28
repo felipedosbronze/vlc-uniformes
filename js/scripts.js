@@ -59,8 +59,27 @@ function loadOrderCart() {
     }
 }
 
+function getOrderQuantity(cart) {
+    return cart.reduce((sum, item) => sum + (Number(item?.quantity) || 0), 0);
+}
+
+function updateOrderCountBadges(cartOverride) {
+    const cart = Array.isArray(cartOverride) ? cartOverride : loadOrderCart();
+    const count = getOrderQuantity(cart);
+    document.querySelectorAll('[data-order-count]').forEach(el => {
+        if (count > 0) {
+            el.textContent = String(count);
+            el.classList.add('show');
+        } else {
+            el.textContent = '';
+            el.classList.remove('show');
+        }
+    });
+}
+
 function saveOrderCart(cart) {
     localStorage.setItem(ORDER_STORAGE_KEY, JSON.stringify(cart));
+    updateOrderCountBadges(cart);
 }
 
 function loadOrderCustomer() {
@@ -600,6 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tab) switchCatalog(tab);
 
         initOrdersPage();
+        updateOrderCountBadges();
     })();
 });
 
