@@ -270,8 +270,10 @@ async function loadProducts() {
         if (window.location.protocol === 'file:') {
             throw new Error('FILE_PROTOCOL_BLOCK');
         }
-        const url = new URL('assets/products.json', window.location.href).toString();
-        const response = await fetch(url, { cache: 'no-store' });
+        const url = new URL('assets/products.json', window.location.href);
+        const buildId = document.querySelector('meta[name="build"]')?.content;
+        url.searchParams.set('v', buildId || '1');
+        const response = await fetch(url.toString(), { cache: 'no-store' });
         if (!response.ok) {
             throw new Error(`Falha ao carregar products.json (HTTP ${response.status})`);
         }
@@ -325,7 +327,7 @@ function renderCategory(categoryId, sectors) {
                         <thead>
                             <tr>
                                 <th class="col-img" style="width:120px;">Foto</th>
-                                <th>Peca</th>
+                                <th>Peça</th>
                                 <th style="width:130px;">Valor Unit.</th>
                                 <th style="width:160px;">Pedido</th>
                             </tr>

@@ -590,6 +590,11 @@ img { max-width: 100%; display: block; }
     cursor: pointer;
     user-select: none;
     transition: var(--transition);
+    border-radius: 12px 12px 0 0;
+}
+
+.sector-header.collapsed {
+    border-radius: 12px;
 }
 
 .sector-header:hover {
@@ -620,6 +625,7 @@ img { max-width: 100%; display: block; }
     transition: max-height 0.4s ease;
     border: 1px solid var(--color-border);
     border-top: none;
+    border-radius: 0 0 12px 12px;
 }
 
 .sector-content.collapsed {
@@ -715,6 +721,7 @@ img { max-width: 100%; display: block; }
     font-size: 0.83rem;
     color: var(--color-text-light);
     line-height: 1.6;
+    border-radius: 12px;
 }
 
 .note-banner strong {
@@ -727,6 +734,7 @@ img { max-width: 100%; display: block; }
     padding: 80px 40px;
     border: 1px solid var(--color-border);
     background: var(--color-section-alt);
+    border-radius: 14px;
 }
 
 .placeholder-panel h3 {
@@ -766,6 +774,7 @@ img { max-width: 100%; display: block; }
     background: var(--color-white);
     padding: 24px;
     box-shadow: var(--shadow-sm);
+    border-radius: 14px;
 }
 
 .order-card-header {
@@ -900,6 +909,7 @@ img { max-width: 100%; display: block; }
     border: 1px solid var(--color-border);
     background: var(--color-section-alt);
     padding: 16px;
+    border-radius: 14px;
 }
 
 .order-summary-row {
