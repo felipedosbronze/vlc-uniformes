@@ -7,7 +7,7 @@ const navClose = document.getElementById('navClose');
 const WHATSAPP_PHONE = '5500000000000';
 const ORDER_STORAGE_KEY = 'vlc_order_cart_v1';
 const ORDER_CUSTOMER_KEY = 'vlc_order_customer_v1';
-const ORDER_DEFAULT_SIZES = ['P', 'M', 'G', 'GG', 'G1', 'G2', 'G3'];
+const ORDER_DEFAULT_SIZES = ['PP', 'P', 'M', 'G', 'GG', 'G1', 'G2', 'G3'];
 
 function openMobile() {
     if (!navMobile || !navOverlay || !hamburger) return;
