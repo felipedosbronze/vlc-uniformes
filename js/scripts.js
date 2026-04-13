@@ -7,7 +7,7 @@ const navClose = document.getElementById('navClose');
 const WHATSAPP_PHONE = '5500000000000';
 const ORDER_STORAGE_KEY = 'vlc_order_cart_v1';
 const ORDER_CUSTOMER_KEY = 'vlc_order_customer_v1';
-const ORDER_DEFAULT_SIZES = ['PP', 'P', 'M', 'G', 'GG', 'XG', 'U'];
+const ORDER_DEFAULT_SIZES = ['P', 'M', 'G', 'GG', 'G1', 'G2', 'G3'];
 
 function openMobile() {
     if (!navMobile || !navOverlay || !hamburger) return;
@@ -53,7 +53,25 @@ function loadOrderCart() {
         const raw = localStorage.getItem(ORDER_STORAGE_KEY);
         if (!raw) return [];
         const parsed = JSON.parse(raw);
-        return Array.isArray(parsed) ? parsed : [];
+        const list = Array.isArray(parsed) ? parsed : [];
+        let changed = false;
+        const normalized = list
+            .filter(Boolean)
+            .map(item => {
+                const next = { ...item };
+                if (!ORDER_DEFAULT_SIZES.includes(next.size)) {
+                    next.size = 'M';
+                    changed = true;
+                }
+                const expectedKey = `${next.category}|${next.sector}|${next.name}|${next.size}`;
+                if (next.key !== expectedKey) {
+                    next.key = expectedKey;
+                    changed = true;
+                }
+                return next;
+            });
+        if (changed) saveOrderCart(normalized);
+        return normalized;
     } catch {
         return [];
     }
